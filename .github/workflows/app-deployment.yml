@@ -20,6 +20,11 @@ jobs:
   say-hello:
     runs-on: windows-latest
     steps:
+      - uses: mheap/github-action-required-labels@v1
+        with:
+          mode: exactly
+          count: 0
+          labels: "do not build"
       - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
       - run: echo Hello word,today is $TODAY
       - uses: actions/checkout@v3
