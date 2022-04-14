@@ -3,15 +3,15 @@ name: Deploy Application
 on:
   push:
     path:
-      - '!README.md'
-      - '!storage/**'
-      - '**.blade'
+#      - '!README.md'
+#      - '!storage/**'
+#      - '**.blade'
     branches:
-      - 'master'
-      - 'main'
-      - 'sonbt'
-      - '!dev/**'
-
+#      - 'master'
+#      - 'main'
+#      - 'sonbt'
+#      - '!dev/**'
+    workflow_dispatch:
 jobs:
   say-hello:
     runs-on: windows-latest
