@@ -11,7 +11,7 @@ on:
 #      - 'main'
 #      - 'sonbt'
 #      - '!dev/**'
-    workflow_dispatch:
+  workflow_dispatch:
 jobs:
   say-hello:
     runs-on: windows-latest
