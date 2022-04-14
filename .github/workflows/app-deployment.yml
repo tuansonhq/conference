@@ -1,0 +1,21 @@
+name: Deploy Application
+
+on:
+  push:
+    path:
+      - '!README.md'
+      - '!storage/**'
+      - '**.blade'
+    branches:
+      - 'master'
+      - 'main'
+      - 'sonbt'
+      - '!dev/**'
+
+jobs:
+  say-hello:
+    runs-on: windows-latest
+    steps:
+      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+      - run: echo Hello word,today is $TODAY
+      - uses: actions/checkout@v3
