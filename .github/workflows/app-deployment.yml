@@ -3,14 +3,18 @@ name: Deploy Application
 on:
   push:
     path:
-#      - '!README.md'
-#      - '!storage/**'
-#      - '**.blade'
+      - '!README.md'
+      - '!storage/**'
+      - '**.blade'
     branches:
-#      - 'master'
-#      - 'main'
-#      - 'sonbt'
-#      - '!dev/**'
+      - 'master'
+      - 'main'
+      - 'sonbt'
+      - '!dev/**'
+  pull_request:
+    type: [opened,reopened,synchronize,labeled,unlabeled]
+    path:
+    branches:
   workflow_dispatch:
 jobs:
   say-hello:
